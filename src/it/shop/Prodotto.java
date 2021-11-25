@@ -22,7 +22,7 @@ public class Prodotto {
 	
 	private int generaCodice() {
 		Random random = new Random();
-		return random.nextInt(1000);
+		return random.nextInt(100000);
 	}
 	
 	//metodo prezzo base
@@ -30,14 +30,14 @@ public class Prodotto {
 		return prezzo;
 	}
 	
-	//metodo prezzo+ivato
+	//metodo prezzo con iva
 	public int prezzoIva() {
 		return prezzo + prezzo * iva / 100;
 	}
 	
 	//metodo nome esteso
 	public String nomeEsteso() {
-		return codice + nome;
+		return codice + " - " + nome;
 	}
 	
 	//metodi getter/setter

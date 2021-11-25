@@ -9,6 +9,7 @@ public class Main {
 		// getter test
 		System.out.println("codice prodotto: " + prodotto.getCodice());
 		System.out.println("nome prodotto: " + prodotto.getNome());
+		System.out.println("nome esteso prodotto: " + prodotto.nomeEsteso());
 		System.out.println("descrizione prodotto: " + prodotto.getDescrizione());
 		System.out.println("prezzo prodotto: " + prodotto.getPrezzo() + "€");
 		System.out.println("iva prodotto: " + prodotto.getIva() + "%");
@@ -20,6 +21,7 @@ public class Main {
 		prodotto.setNome("Paperella STRABILIANTE");
 		System.out.println("nome prodotto aggiornato: " + prodotto.getNome());
 		prodotto.setDescrizione("Una STRABILIANTE paperella di gomma gialla");
+		System.out.println("nome esteso prodotto: " + prodotto.nomeEsteso());
 		System.out.println("descrizione prodotto aggiornata: " + prodotto.getDescrizione());
 		prodotto.setPrezzo(99);
 		System.out.println("prezzo prodotto aggiornato: " + prodotto.getPrezzo() + "€");
