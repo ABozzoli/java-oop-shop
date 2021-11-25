@@ -8,11 +8,11 @@ public class Prodotto {
 	private int codice; // solo lettura
 	private String nome;
 	private String descrizione;
-	private int prezzo;
+	private double prezzo;
 	private int iva;
 	
 	// costruttori
-	public Prodotto(String nome, String descrizione, int prezzo, int iva) { 
+	public Prodotto(String nome, String descrizione, double prezzo, int iva) { 
 		this.codice = generaCodice();
 		this.nome = nome;
 		this.descrizione = descrizione;
@@ -26,12 +26,12 @@ public class Prodotto {
 	}
 	
 	//metodo prezzo base
-	public int prezzo() {
+	public double prezzo() {
 		return prezzo;
 	}
 	
 	//metodo prezzo con iva
-	public int prezzoIva() {
+	public double prezzoIva() {
 		return prezzo + prezzo * iva / 100;
 	}
 	
@@ -57,11 +57,11 @@ public class Prodotto {
 		this.descrizione = descrizione;
 	}
 
-	public int getPrezzo() {
+	public double getPrezzo() {
 		return prezzo;
 	}
 
-	public void setPrezzo(int prezzo) {
+	public void setPrezzo(double prezzo) {
 		this.prezzo = prezzo;
 	}
 
