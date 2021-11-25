@@ -18,7 +18,6 @@ public class Prodotto {
 		this.descrizione = descrizione;
 		this.prezzo = prezzo;
 		this.iva = iva;
-		
 	}
 	
 	private int generaCodice() {
@@ -29,6 +28,16 @@ public class Prodotto {
 	//metodo prezzo base
 	public int prezzo() {
 		return prezzo;
+	}
+	
+	//metodo prezzo+ivato
+	public int prezzoIva() {
+		return prezzo + prezzo * iva / 100;
+	}
+	
+	//metodo nome esteso
+	public String nomeEsteso() {
+		return codice + nome;
 	}
 	
 	//metodi getter/setter
@@ -66,16 +75,6 @@ public class Prodotto {
 
 	public int getCodice() {
 		return codice;
-	}
-
-	//metodo prezzo+ivato
-	public int prezzoIva() {
-		return prezzo + prezzo * iva / 100;
-	}
-	
-	//metodo nome esteso
-	public String nomeEsteso() {
-		return codice + nome;
 	}
 	
 }
