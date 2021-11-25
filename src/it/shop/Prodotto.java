@@ -12,8 +12,13 @@ public class Prodotto {
 	private int iva;
 	
 	// costruttori
-	public Prodotto() { 
+	public Prodotto(String nome, String descrizione, int prezzo, int iva) { 
 		this.codice = generaCodice();
+		this.nome = nome;
+		this.descrizione = descrizione;
+		this.prezzo = prezzo;
+		this.iva = iva;
+		
 	}
 	
 	private int generaCodice() {
@@ -21,11 +26,52 @@ public class Prodotto {
 		return random.nextInt(1000);
 	}
 	
-	//metodi getter/setter
-	
 	//metodo prezzo base
+	public int prezzo() {
+		return prezzo;
+	}
 	
+	//metodi getter/setter
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public int getPrezzo() {
+		return prezzo;
+	}
+
+	public void setPrezzo(int prezzo) {
+		this.prezzo = prezzo;
+	}
+
+	public int getIva() {
+		return iva;
+	}
+
+	public void setIva(int iva) {
+		this.iva = iva;
+	}
+
+	public int getCodice() {
+		return codice;
+	}
+
 	//metodo prezzo+ivato
+	public int prezzoIva() {
+		return prezzo + prezzo * iva / 100;
+	}
 	
 	//metodo nome esteso
 	public String nomeEsteso() {
